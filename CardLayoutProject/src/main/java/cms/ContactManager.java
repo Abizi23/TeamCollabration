@@ -56,8 +56,7 @@ public class ContactManager {
     }
 
     private void handleAddButton() {
-        cardLayout.show(mainPanel, "Form");
-    }
+        cardLayout.show(mainPanel, "Form");}
 
     private JPanel createContactDetailsView() {
         JPanel panel = new JPanel(new GridLayout(4, 1));
