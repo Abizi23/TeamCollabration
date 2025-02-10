@@ -55,7 +55,7 @@ public class ContactManager {
         return panel;
     }
 
-    private void handleAddButton() {
+    public void handleAddButton() {
         cardLayout.show(mainPanel, "Form");}
 
     private JPanel createContactDetailsView() {
@@ -76,7 +76,7 @@ public class ContactManager {
         return panel;
     }
 
-    private void handleBackButton() {
+    public void handleBackButton() {
         cardLayout.show(mainPanel, "List");
     }
 
@@ -104,15 +104,15 @@ public class ContactManager {
         return panel;
     }
 
-    private void handleSaveButton() {
+    public void handleSaveButton() {
         saveContact();
     }
 
-    private void handleCancelButton() {
+    public void handleCancelButton() {
         cardLayout.show(mainPanel, "List");
     }
 
-    private void saveContact() {
+    public void saveContact() {
         String name = nameField.getText().trim();
         String phone = phoneField.getText().trim();
         String email = emailField.getText().trim();
@@ -130,7 +130,7 @@ public class ContactManager {
         cardLayout.show(mainPanel, "List");
     }
 
-    private void showContactDetails() {
+    public void showContactDetails() {
         int selectedIndex = contactList.getSelectedIndex();
         if (selectedIndex == -1) {
             JOptionPane.showMessageDialog(frame, "Please select a contact!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -145,8 +145,62 @@ public class ContactManager {
         cardLayout.show(mainPanel, "Details");
     }
 
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    public JPanel getMainPanel() {
+        return mainPanel;
+    }
+
+    public CardLayout getCardLayout() {
+        return cardLayout;
+    }
+
+    public DefaultListModel<String> getContactListModel() {
+        return contactListModel;
+    }
+
+    public ArrayList<Contact> getContacts() {
+        return contacts;
+    }
+
+    public JList<String> getContactList() {
+        return contactList;
+    }
+
+    public JTextField getNameField() {
+        return nameField;
+    }
+
+    public JTextField getPhoneField() {
+        return phoneField;
+    }
+
+    public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public JLabel getDetailName() {
+        return detailName;
+    }
+
+    public JLabel getDetailPhone() {
+        return detailPhone;
+    }
+
+    public JLabel getDetailEmail() {
+        return detailEmail;
+    }
+
+
+
+
+
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(ContactManager::new);
+
+        new ContactManager();
     }
 }
 
