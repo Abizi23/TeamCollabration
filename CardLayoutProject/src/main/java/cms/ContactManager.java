@@ -194,6 +194,27 @@ public class ContactManager {
         return detailEmail;
     }
 
+    public String getCurrentCardName() {
+        // Iterate through all components of the main panel
+        for (Component comp : mainPanel.getComponents()) {
+            if (comp.isVisible()) {
+                // Check which card is currently visible
+                if (comp == mainPanel.getComponent(0)) {
+                    return "List";
+                } else if (comp == mainPanel.getComponent(1)) {
+                    return "Details";
+                } else if (comp == mainPanel.getComponent(2)) {
+                    return "Form";
+                }
+            }
+        }
+        return null; // No card is visible
+    }
+
+
+
+
+
 
 
 
