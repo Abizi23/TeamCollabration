@@ -137,6 +137,66 @@ public class ToDoList {
     }
 
 
+    public JMenuBar getMenuBar() {
+        return menuBar;
+    }
+
+    public JMenuItem getHome() {
+        return home;
+    }
+
+    public JMenuItem getExit() {
+        return exit;
+    }
+
+    public JMenuItem getAddTask() {
+        return addTask;
+    }
+
+    public JMenu getMenu() {
+        return menu;
+    }
+
+    public JFrame getFrame() {
+        return frame;
+    }
+
+    public JPanel getHomePanel() {
+        return homePanel;
+    }
+
+    public JPanel getAddTaskPanel() {
+        return addTaskPanel;
+    }
+
+    public JPanel getCurrentPanel() {
+        return currentPanel;
+    }
+
+    public DefaultListModel<String> getTaskListModel() {
+        return taskListModel;
+    }
+
+    public ArrayList<Task> getListOfTasks() {
+        return listOfTasks;
+    }
+
+    public JList<String> getTaskList() {
+        return taskList;
+    }
+
+    public JTextField getToDoField() {
+        return toDoField;
+    }
+
+    public JTextField getIdField() {
+        return idField;
+    }
+
+    public JTextField getDueDateField() {
+        return dueDateField;
+    }
+
     public static void main(String[] args) {
 
         new ToDoList();
