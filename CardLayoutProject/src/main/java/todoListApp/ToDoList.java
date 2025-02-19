@@ -56,8 +56,6 @@ public class ToDoList {
 
         currentPanel = homePanel;
 
-//        homePanel.add(menuBar,BorderLayout.NORTH);
-
 
 
         home.addActionListener(new ActionListener() {
@@ -196,6 +194,9 @@ public class ToDoList {
     public JTextField getDueDateField() {
         return dueDateField;
     }
+
+
+//    runner method
 
     public static void main(String[] args) {
 
